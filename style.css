@@ -1,0 +1,143 @@
+
+/* Reset básico e estilos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color: #00734F; /* Cor verde para o título principal */
+    font-family: 'Anton', sans-serif;
+}
+
+.month-category {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.month-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #00734F; /* Cor verde para o título do mês */
+    cursor: pointer;
+}
+
+.month-title:hover {
+    background-color: #ee931c; /* Cor de fundo verde claro ao passar o cursor */
+    transform: scale(1.0); /* Aumenta ligeiramente o tamanho do título */
+    color: #ffffff; /* Escurece a cor do texto para contraste */
+    transition: all 0.3s ease;
+    border-radius: 5px 5px;
+    
+}
+
+.event-list {
+    display: none; /* Oculta a lista de eventos inicialmente */
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.event-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    color: #000000; /* Cor do texto padrão dos eventos */
+}
+
+.event-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.event-details {
+    color: #333; /* Cor para detalhes do evento */
+    font-size: 1rem;
+}
+
+.event-period {
+    font-style: italic;
+    color: #333; /* Cor para o texto do período do evento */
+}
+
+/* Estilos de cores baseados na proximidade das datas */
+.event-item.past {
+    background-color: #d3d3d3; /* Fundo cinza para eventos que já terminaram */
+}
+
+.event-item.past::before {
+    content: "Encerrado";
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-item.upcoming-7 {
+    background-color: #ffffcc; /* Fundo amarelo claro para eventos que faltam 7 dias para o encerramento */
+}
+
+.event-item.upcoming-3 {
+    background-color: #ffcccc; /* Fundo vermelho claro para eventos que faltam 3 dias para o encerramento */
+}
+
+.event-item.upcoming-3::before {
+    content: "Atenção:";
+    display: block;
+    color: #cc0000; /* Cor vermelha para a mensagem de atenção */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-item.upcoming {
+    background-color: #d4edda; /* Fundo verde claro para eventos que já começaram e ainda não terminaram */
+}
+
+/* Estilo para o botão */
+.btn-custom {
+    display: block;
+    width: fit-content;
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #00734F; /* Cor verde para o botão */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.btn-custom:hover {
+    background-color: #ee931c; /* Cor verde mais escura ao passar o cursor */
+    transform: scale(1.05);
+    
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    color: #FFFFFF; /* Cor verde para o título principal */
+    background-color: #ee931c;
+    border-radius: 5px 5px;
+}
